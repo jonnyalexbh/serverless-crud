@@ -11,3 +11,11 @@ $ sls create -t aws-nodejs -p serverless-crud
 ```sh
 $ sls offline
 ```
+
+**Create migrations**
+
+```sh
+$ sls migrations create -n create-author
+$ sls migrations up
+$ sls migrations down
+```

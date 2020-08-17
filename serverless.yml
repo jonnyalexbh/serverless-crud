@@ -2,10 +2,25 @@ service: serverless-crud
 
 plugins:
   - serverless-offline
+  - serverless-dotenv-plugin
+  - serverless-sequelize-migrations
+
+custom:
+  migrationsPath: './database/migrations'
+  dotenv:
+   basepath: ./
+   logging: false
 
 provider:
   name: aws
   runtime: nodejs12.x
+  environment:
+    DB_DIALECT: ${env:DB_DIALECT}
+    DB_NAME: ${env:DB_NAME}
+    DB_USERNAME: ${env:DB_USERNAME}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+    DB_HOST: ${env:DB_HOST}
+    DB_PORT: ${env:DB_PORT}
 
 functions:
   getAllAuthors:
