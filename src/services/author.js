@@ -6,7 +6,7 @@ const { json } = require('../helpers');
 const { parseCreateAuthor } = require('../mappers');
 const Author = require("../models/author")(db, Sequelize);
 
-exports.getAll = async () => {
+exports.allAuthors = async () => {
   try {
     logger.info('Trying to create a author');
     const authors = await Author.findAll();

@@ -23,9 +23,9 @@ provider:
     DB_PORT: ${env:DB_PORT}
 
 functions:
-  getAllAuthors:
-    handler: handler.getAllAuthors
-    name: getAllAuthors
+  allAuthors:
+    handler: handler.allAuthors
+    name: allAuthors
     events:
       - http:
           path: authors
@@ -57,4 +57,13 @@ functions:
       - http:
           path: author/{id}
           method: delete
+          cors: true
+
+  allPublications:
+    handler: handler.allPublications
+    name: allPublications
+    events:
+      - http:
+          path: publications
+          method: get
           cors: true

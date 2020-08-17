@@ -1,10 +1,11 @@
 'use strict';
 
 const { getBody } = require('./src/helpers');
-const { getAll, storeAuthor, updateAuthor, deleteAuthor } = require('./src/services/author');
+const { allAuthors, storeAuthor, updateAuthor, deleteAuthor } = require('./src/services/author');
+const { allPublications } = require('./src/services/publication');
 
-module.exports.getAllAuthors = async _ => {
-  return getAll();
+module.exports.allAuthors = async _ => {
+  return allAuthors();
 };
 
 module.exports.storeAuthor = event => {
@@ -17,4 +18,8 @@ module.exports.updateAuthor = event => {
 
 module.exports.deleteAuthor = event => {
   return deleteAuthor(event);
+};
+
+module.exports.allPublications = async _ => {
+  return allPublications();
 };
