@@ -20,3 +20,10 @@ $ sls migrations create -n create-publication
 $ sls migrations up
 $ sls migrations down
 ```
+
+**Run project locally**
+
+```sh
+$ npm run migrate
+$ npm start
+```

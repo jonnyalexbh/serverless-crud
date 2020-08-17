@@ -8,8 +8,8 @@ plugins:
 custom:
   migrationsPath: './database/migrations'
   dotenv:
-   basepath: ./
-   logging: false
+    basepath: ./
+    logging: false
 
 provider:
   name: aws
@@ -30,4 +30,13 @@ functions:
       - http:
           path: authors
           method: get
+          cors: true
+
+  storeAuthor:
+    handler: handler.storeAuthor
+    name: storeAuthor
+    events:
+      - http:
+          path: author
+          method: post
           cors: true

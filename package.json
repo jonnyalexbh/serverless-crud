@@ -4,7 +4,9 @@
   "description": "Serverless Crud",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "sls offline",
+    "migrate": "sls migrations up",
+    "migrate:down": "sls migrations up"
   },
   "repository": {
     "type": "git",

@@ -24,7 +24,7 @@ module.exports = {
       },
       date_of_birth: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       created_at: Sequelize.DATE,
       updated_at: Sequelize.DATE
