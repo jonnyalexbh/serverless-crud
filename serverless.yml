@@ -41,6 +41,15 @@ functions:
           method: post
           cors: true
 
+  updateAuthor:
+    handler: handler.updateAuthor
+    name: updateAuthor
+    events:
+      - http:
+          path: author/{id}
+          method: put
+          cors: true
+
   deleteAuthor:
     handler: handler.deleteAuthor
     name: deleteAuthor
