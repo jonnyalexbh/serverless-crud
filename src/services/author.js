@@ -28,3 +28,14 @@ exports.storeAuthor = async (body) => {
     throw new Error('Cannot create author');
   }
 };
+
+exports.deleteAuthor = async (event) => {
+  try {
+    logger.info('Attempting delete author');
+    await Author.destroy({ where: { id: event.pathParameters.id } });
+    return json('Author was deleted successfully');
+  } catch (error) {
+    logger.error(error.message);
+    throw new Error('Cannot delete author');
+  }
+};

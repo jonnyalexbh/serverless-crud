@@ -40,3 +40,12 @@ functions:
           path: author
           method: post
           cors: true
+
+  deleteAuthor:
+    handler: handler.deleteAuthor
+    name: deleteAuthor
+    events:
+      - http:
+          path: author/{id}
+          method: delete
+          cors: true
