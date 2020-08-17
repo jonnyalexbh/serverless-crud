@@ -1,8 +1,7 @@
 'use strict';
 
-module.exports.getAllAuthors = async event => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ data: 'all authors' }),
-  };
+const { getAll } = require('./src/services/author');
+
+module.exports.getAllAuthors = async _ => {
+  return getAll();
 };
