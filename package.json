@@ -1,0 +1,22 @@
+{
+  "name": "serverless-crud",
+  "version": "1.0.0",
+  "description": "Serverless Crud",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonnyalexbh/serverless-crud.git"
+  },
+  "author": "jonnyalexbh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonnyalexbh/serverless-crud/issues"
+  },
+  "homepage": "https://github.com/jonnyalexbh/serverless-crud#readme",
+  "devDependencies": {
+    "serverless-offline": "^6.5.0"
+  }
+}

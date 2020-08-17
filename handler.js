@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports.hello = async event => {
+module.exports.getAllAuthors = async event => {
   return {
     statusCode: 200,
-    body: JSON.stringify({ data: 'info initial' }),
+    body: JSON.stringify({ data: 'all authors' }),
   };
 };
