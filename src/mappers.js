@@ -4,3 +4,9 @@ exports.parseCreateAuthor = body => ({
   email: body.email,
   dateOfBirth: body.date_of_birth
 });
+
+exports.parseCreatePublication = body => ({
+  authorId: body.author_id,
+  title: body.title,
+  body: body.body
+});

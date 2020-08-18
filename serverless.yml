@@ -67,3 +67,12 @@ functions:
           path: publications
           method: get
           cors: true
+
+  storePublication:
+    handler: handler.storePublication
+    name: storePublication
+    events:
+      - http:
+          path: publications
+          method: post
+          cors: true

@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
       primaryKey: true,
       autoIncrement: true
     },
-    author_id: {
+    authorId: {
       type: Sequelize.INTEGER,
       references: {
         model: sequelize.models.authors,
@@ -27,5 +27,11 @@ module.exports = (sequelize, Sequelize) => {
     underscored: true,
     timestamps: false
   })
+  Publication.associate = models => {
+    Publication.belongsTo(models.authors, {
+      as: 'authorId',
+      foreignKey: 'author_id'
+    });
+  };
   return Publication;
 };
