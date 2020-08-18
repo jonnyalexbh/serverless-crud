@@ -2,7 +2,7 @@
 
 const { getBody } = require('./src/helpers');
 const { allAuthors, storeAuthor, updateAuthor, deleteAuthor } = require('./src/services/author');
-const { allPublications, storePublication } = require('./src/services/publication');
+const { allPublications, storePublication, deletePublication } = require('./src/services/publication');
 
 module.exports.allAuthors = async _ => {
   return allAuthors();
@@ -26,4 +26,8 @@ module.exports.allPublications = async _ => {
 
 module.exports.storePublication = event => {
   return storePublication(getBody(event));
+};
+
+module.exports.deletePublication = event => {
+  return deletePublication(event);
 };

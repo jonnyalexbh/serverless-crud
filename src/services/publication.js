@@ -29,3 +29,14 @@ exports.storePublication = async (data) => {
     throw new Error('Cannot create publication');
   }
 };
+
+exports.deletePublication = async (event) => {
+  try {
+    logger.info('Attempting delete publication');
+    await Publication.destroy({ where: { id: event.pathParameters.id } });
+    return json({ mesagge: 'Publication was deleted successfully' });
+  } catch (error) {
+    logger.error(error.message);
+    throw new Error('Cannot delete publication');
+  }
+};

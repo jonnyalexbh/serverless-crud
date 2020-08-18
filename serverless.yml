@@ -76,3 +76,12 @@ functions:
           path: publications
           method: post
           cors: true
+
+  deletePublication:
+    handler: handler.deletePublication
+    name: deletePublication
+    events:
+      - http:
+          path: publications/{id}
+          method: delete
+          cors: true
